@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./source/ticker.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>Accountancy Cloud</title>
+</head>
+
+<body>
+
+  <div class="holder">
+
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+
+          <a class="header__logo-desctop" href="#" aria-label="logo">
+            <svg class="header__logo-svg-desctop">
+              <use class="header__logo-icon" xlink:href="./images/sprite.svg#logo"></use>
+            </svg>
+          </a>
+
+          <a class="header__logo-mobile" href="#" aria-label="logo">
+            <svg class="header__logo-svg-mobile">
+              <use class="header__logo-icon footer-logo--black" xlink:href="./images/sprite.svg#footer-logo"></use>
+            </svg>
+          </a>
+
+          <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">How it works</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">What we do</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Who we help</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Resources</a>
+              </li>
+            </ul>
+
+            <div class="header__buttons-box--mobile buttons-box--mobile">
+              <button class="btn header__btn login-btn open-modal-btn">Login</button>
+              <button class="btn header__btn expert-btn">Talk to an Expert</button>
+            </div>
+
+          </nav>
+
+          <div class="header__buttons-box--desctop">
+            <button class="btn header__btn login-btn open-modal-btn">Login</button>
+            <button class="btn header__btn expert-btn">Talk to an Expert</button>
+          </div>
+
+          <button class="menu-toggler-btn" aria-label="menu">
+            <span class="icon-menu__line line-1"></span>
+            <span class="icon-menu__line line-2"></span>
+            <span class="icon-menu__line line-3"></span>
+            <span class="icon-menu__line line-4"></span>
+          </button>
+
+        </div>
+      </div>
+
+      <!-- POPUP LOGIN -->
+
+      <!-- <button class="open-modal-btn">Open modal</button> -->
+
+      <div class="popup">
+
+        <div class="popup-inner">
+
+          <button class="close-modal-btn" aria-label="close"></button>
+
+          <div class="popup-content">
+
+            <form action="" class="form_main">
+              <p class="heading">Login</p>
+              <div class="inputContainer">
+                <svg class="inputIcon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#2e2e2e"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M13.106 7.222c0-2.967-2.249-5.032-5.482-5.032-3.35 0-5.646 2.318-5.646 5.702 0 3.493 2.235 5.708 5.762 5.708.862 0 1.689-.123 2.304-.335v-.862c-.43.199-1.354.328-2.29.328-2.926 0-4.813-1.88-4.813-4.798 0-2.844 1.921-4.881 4.594-4.881 2.735 0 4.608 1.688 4.608 4.156 0 1.682-.554 2.769-1.416 2.769-.492 0-.772-.28-.772-.76V5.206H8.923v.834h-.11c-.266-.595-.881-.964-1.6-.964-1.4 0-2.378 1.162-2.378 2.823 0 1.737.957 2.906 2.379 2.906.8 0 1.415-.39 1.709-1.087h.11c.081.67.703 1.148 1.503 1.148 1.572 0 2.57-1.415 2.57-3.643zm-7.177.704c0-1.197.54-1.907 1.456-1.907.93 0 1.524.738 1.524 1.907S8.308 9.84 7.371 9.84c-.895 0-1.442-.725-1.442-1.914z">
+                  </path>
+                </svg>
+                <input type="text" class="inputField" id="username" placeholder="Username">
+              </div>
+
+              <div class="inputContainer">
+                <svg class="inputIcon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#2e2e2e"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z">
+                  </path>
+                </svg>
+                <input type="password" class="inputField" id="password" placeholder="Password">
+              </div>
+
+              <button id="button">Submit</button>
+              <a class="forgotLink" href="#">Forgot your password?</a>
+            </form>
+
+          </div>
+
+        </div>
+      </div>
+      <!-- END LOGIN POPUP -->
+
+
+      <!-- POPUP CONTACT -->
+
+      <!-- <button class="open-contact-modal-btn">Open modal</button> -->
+
+      <div class="popup-contact">
+
+        <div class="popup-contact-inner">
+
+          <button class="close-modal-btn" aria-label="close"></button>
+
+          <div class="popup-contact-content">
+
+            <div class="card">
+              <span class="contact-card-title">Leave a Comment</span>
+              <form class="form">
+                <div class="group">
+                  <input placeholder="‎" type="text" required="">
+                  <label for="name">Name</label>
+                </div>
+                <div class="group">
+                  <input placeholder="‎" type="email" id="email" name="email" required="">
+                  <label for="email">Email</label>
+                </div>
+                <div class="group">
+                  <textarea placeholder="‎" id="comment" name="comment" rows="5" required=""></textarea>
+                  <label for="comment">Comment</label>
+                </div>
+                <button type="submit">Submit</button>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- END POPUP CONTACT -->
+
+    </header>
+
+    <main class="main">
+
+      <section class="top">
+        <div class="container-right">
+          <div class="top__inner">
+            <div class="top__content">
+              <h1 class="title" data-aos="fade-right">
+                Get your finances right
+              </h1>
+              <p class="top__text" data-aos="fade-up">
+                Get your finances right with Accountancy Cloud. We offer the best accounting, R&D credits and CFO
+                services for ambitious businesses who want to grow.
+              </p>
+              <p class="top__hint">
+                Switching to us is simple
+              </p>
+              <button class="btn top__btn open-contact-modal-btn">
+                Talk to us
+              </button>
+            </div>
+            <picture class="top__image-box" data-aos="fade-left">
+              <source type="image/webp" srcset="./images/top-bg.webp">
+              <img class="top__image" src="./images/top-bg.png" width="867" height="517" alt="notebook">
+            </picture>
+          </div>
+        </div>
+      </section>
+
+      <section class="entrepreneurs">
+        <div class="container">
+          <div class="entrepreneurs__inner">
+            <div class="entrepreneurs__content">
+              <h2 class="section-title entrepreneurs__title" data-aos="fade-down">
+                The best finance stack for entrepreneurs
+              </h2>
+              <div class="entrepreneurs__text">
+                70% of companies switch to us from their DIY or legacy system. Now, get your bookkeeping, tax prep and
+                CFO problems, solved. Complete our <button class="entrepreneurs__btn open-contact-modal-btn">contact
+                  form,</button> and find
+                out why 9 out of 10 customers recommend us.
+              </div>
+            </div>
+            <picture class="entrepreneurs__image-box" data-aos="fade-right">
+              <source type="image/webp" srcset="./images/finance-img.webp">
+              <img class="entrepreneurs__img" src="./images/finance-img.png" width="483" height="280" alt="70 percent">
+            </picture>
+          </div>
+        </div>
+      </section>
+
+      <section class="switch">
+        <div class="container">
+          <div class="switch__inner">
+
+            <h2 class="section-title switch__title" data-aos="fade-down">
+              Why Switch?
+            </h2>
+
+            <div class="switch__items-box">
+              <div class="switch__item" data-aos="flip-left">
+                <img class="switch__item-img" src="./images/switch-1.png" height="150" width="200" alt="picture">
+                <h4 class="switch__item-title">
+                  Powerful software
+                </h4>
+                <p class="switch__item-text">
+                  Included in our service, each customer gets in-house software to access live
+                  <a class="switch__item-link" href="#">financial dashboards</a>
+                  and real-time management reports.
+                </p>
+              </div>
+              <div class="switch__item" data-aos="flip-left" data-aos-delay="100">
+                <img class="switch__item-img" src="./images/switch-2.png" height="150" width="200" alt="picture">
+                <h4 class="switch__item-title">
+                  Track cashflow
+                </h4>
+                <p class="switch__item-text">
+                  Stay on top of your working capital, <a class="switch__item-link" href="#">taxes,</a> and cashflow, to
+                  ensure your business is performing at its best.
+                </p>
+              </div>
+              <div class="switch__item" data-aos="flip-left" data-aos-delay="200">
+                <img class="switch__item-img" src="./images/switch-3.png" height="150" width="200" alt="picture">
+                <h4 class="switch__item-title">
+                  Award winning support
+                </h4>
+                <p class="switch__item-text">
+                  Expect the best from us. Get a dedicated finance team that will handle all your accounting, R&D
+                  credits and CFO needs.
+                </p>
+              </div>
+            </div>
+
+            <a class="btn switch__btn btn_pink" herf="#">
+              Discover what we do
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="plans">
+        <div class="container">
+          <div class="plans__inner">
+
+            <h2 class="section-title plans__title" data-aos="fade-down">
+              Plans built for growth
+            </h2>
+
+            <div class="plans__items-box">
+              <div class="plans__item" data-aos="flip-left">
+                <img class="plans__item-img" src="./images/plans-1.png" alt="startup">
+                <h4 class="plans__item-title">
+                  Early stage startup
+                </h4>
+                <p class="plans__item-text">
+                  Need your accounting system set up? Learn financial best practice and prime your business for the next
+                  stage of growth. We get you moving quickly with an accounting solution that does what you need.
+                </p>
+              </div>
+              <div class="plans__item" data-aos="flip-left" data-aos-delay="150">
+                <img class="plans__item-img" src="./images/plans-2.png" alt="scale">
+                <h4 class="plans__item-title">
+                  Scale up
+                </h4>
+                <p class="plans__item-text">
+                  Spend less time worrying about your finances and more time shaping your company’s future. Get your
+                  bookkeeping, R&D credits and CFO problems, solved.
+                </p>
+              </div>
+              <div class="plans__item" data-aos="flip-left" data-aos-delay="300">
+                <img class="plans__item-img" src="./images/plans-3.png" alt="growth">
+                <h4 class="plans__item-title">
+                  High growth
+                </h4>
+                <p class="plans__item-text">
+                  Gain the financial accuracy, visibility, and real-time analysis you need to make smarter decisions,
+                  drive efficiency, and achieve total organizational alignment.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="companies">
+        <div class="container">
+          <div class="companies__inner">
+
+            <h3 class="companies__title">
+              Join 200+ amazing companies
+            </h3>
+
+            <ul class="companies__list" data-aos="fade-in">
+              <li class="companies__item">
+                <svg class="companies__img-box">
+                  <use class="companies__img" xlink:href="./images/sprite.svg#companies-1"></use>
+                </svg>
+              </li>
+              <li class="companies__item">
+                <svg class="companies__img-box">
+                  <use class="companies__img" xlink:href="./images/sprite.svg#companies-2"></use>
+                </svg>
+              </li>
+              <li class="companies__item">
+                <svg class="companies__img-box">
+                  <use class="companies__img" xlink:href="./images/sprite.svg#companies-3"></use>
+                </svg>
+              </li>
+              <li class="companies__item">
+                <svg class="companies__img-box">
+                  <use class="companies__img" xlink:href="./images/sprite.svg#companies-4"></use>
+                </svg>
+              </li>
+              <li class="companies__item">
+                <svg class="companies__img-box">
+                  <use class="companies__img" xlink:href="./images/sprite.svg#companies-5"></use>
+                </svg>
+              </li>
+              <li class="companies__item">
+                <svg class="companies__img-box">
+                  <use class="companies__img" xlink:href="./images/sprite.svg#companies-6"></use>
+                </svg>
+              </li>
+              <li class="companies__item">
+                <svg class="companies__img-box">
+                  <use class="companies__img" xlink:href="./images/sprite.svg#companies-7"></use>
+                </svg>
+              </li>
+              <li class="companies__item">
+                <svg class="companies__img-box">
+                  <use class="companies__img" xlink:href="./images/sprite.svg#companies-8"></use>
+                </svg>
+              </li>
+              <li class="companies__item">
+                <svg class="companies__img-box">
+                  <use class="companies__img" xlink:href="./images/sprite.svg#companies-9"></use>
+                </svg>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <section class="hub">
+        <div class="container">
+
+          <div class="hub__inner">
+            <div class="hub__content">
+              <h2 class="section-title hub__title" data-aos="fade-down">
+                The AC Hub
+              </h2>
+              <p class="hub__text">
+                Explore our dedicated online resources. We've got the tips, tricks and online accounting know-how for
+                business success.
+              </p>
+              <a class="btn btn_pink hub__btn" href="#">
+                View Hub
+              </a>
+            </div>
+
+            <picture class="hub__image-box" data-aos="flip-left" data-aos-delay="100">
+              <source type="image/webp" srcset="./images/hub-img.webp">
+              <img class="hub__img" src="./images/hub-img.png" width="483" height="451" alt="hub">
+            </picture>
+
+          </div>
+        </div>
+      </section>
+
+      <section class="ready">
+        <div class="container">
+          <div class="ready__inner">
+
+            <div class="ready__box">
+              <div class="ready__content">
+                <h2 class="section-title ready_title">
+                  Ready to Switch? It's simple.
+                </h2>
+                <p class="ready__text">
+                  Speak to an expert today
+                </p>
+              </div>
+
+              <button class="btn ready__btn">
+                Get Started
+              </button>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+
+          <div class="footer__top">
+
+            <a class="footer__link" href="#">
+              <svg class="footer__icon-box">
+                <use class="footer__icon" xlink:href="./images/sprite.svg#footer-logo"></use>
+              </svg>
+            </a>
+
+            <p class="footer__text">
+              Your new finance team
+            </p>
+
+          </div>
+
+          <div class="footer__content">
+
+            <div class="footer__content-item content-item">
+              <h4 class="content-item__title">
+                How it works
+              </h4>
+              <ul class="content-item__list">
+                <li class="content-item__list-item">
+                  <a class="content-item__link" href="#">Hassle Free Switching</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__content-item content-item">
+              <h4 class="content-item__title">
+                What we do
+              </h4>
+              <ul class="content-item__list">
+                <li class="content-item__list-item">
+                  <a class="content-item__link" href="#">Finance Teams</a>
+                </li>
+                <li class="content-item__list-item">
+                  <a class="content-item__link" href="#">Tax</a>
+                </li>
+                <li class="content-item__list-item">
+                  <a class="content-item__link" href="#">R&D Tax Credits</a>
+                </li>
+                <li class="content-item__list-item">
+                  <a class="content-item__link" href="#">A platform for success</a>
+                </li>
+                <li class="content-item__list-item">
+                  <a class="content-item__link" href="#">A platform for success</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__content-item content-item">
+              <h4 class="content-item__title">
+                Who we help
+              </h4>
+              <ul class="content-item__list">
+                <li class="content-item__list-item">
+                  <a class="content-item__link" href="#">Startups</a>
+                </li>
+                <li class="content-item__list-item">
+                  <a class="content-item__link" href="#">Small Business</a>
+                </li>
+                <li class="content-item__list-item">
+                  <a class="content-item__link" href="#">Medium Business</a>
+                </li>
+                <li class="content-item__list-item">
+                  <a class="content-item__link" href="#">CFO & Head of Finance</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__content-item content-item">
+              <h4 class="content-item__title">
+                Resources
+              </h4>
+              <ul class="content-item__list">
+                <li class="content-item__list-item">
+                  <a class="content-item__link" href="#">Case Studies</a>
+                </li>
+                <li class="content-item__list-item">
+                  <a class="content-item__link" href="#">Blogs</a>
+                </li>
+                <li class="content-item__list-item">
+                  <a class="content-item__link" href="#">Guides</a>
+                </li>
+                <li class="content-item__list-item">
+                  <a class="content-item__link" href="#">Podcasts</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__content-item content-item">
+              <h4 class="content-item__title">
+                Company
+              </h4>
+              <ul class="content-item__list">
+                <li class="content-item__list-item">
+                  <a class="content-item__link" href="#">About Us</a>
+                </li>
+                <li class="content-item__list-item">
+                  <a class="content-item__link" href="#">Careers</a>
+                </li>
+                <li class="content-item__list-item">
+                  <a class="content-item__link" href="#">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__content-item content-item">
+              <h4 class="content-item__title">
+                Speak to us
+              </h4>
+              <ul class="content-item__list">
+                <li class="content-item__list-item">
+                  <a class="content-item__link" href="tel:02045308432">Call 020 4530 8432</a>
+                </li>
+                <li class="content-item__list-item">
+                  <a class="content-item__link" href="#">Refer a friend for £175</a>
+                </li>
+                <li class="content-item__list-item">
+                  <a class="content-item__link" href="#">Partner with us</a>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+
+          <div class="footer__copy">
+
+            <div class="footer__copy-links-box">
+              <a class="footer__copy-link" href="#">© Accountancy Cloud 2021</a>
+              <a class="footer__copy-link" href="#">Privacy Policy & Cookies</a>
+              <a class="footer__copy-link" href="#">Terms of Service</a>
+            </div>
+
+            <a class="footer__copy-link Footer__icon-link" href="#">
+              <svg class="footer__icon-box">
+                <use class="footer__icon" xlink:href="./images/sprite.svg#footer-icon"></use>
+              </svg>
+            </a>
+
+          </div>
+
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="./source/jquery.min.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>
